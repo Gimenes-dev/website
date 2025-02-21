@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { fakeLogin, fakeLogout } from "../mock/fakeBackend";
+import Loading from "../components/loading/Loading";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
@@ -54,7 +55,7 @@ export const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={{ user, login, logout, loading }}>
             {loading ? (
-                <div>Carregando...</div> // Exibe uma mensagem de carregamento enquanto verifica a autenticação
+                <Loading />
             ) : (
                 children // Só renderiza os componentes filhos após a verificação
             )}
