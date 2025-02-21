@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #000000;
+  color: #6b6b6b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    order: 1;
+  }
+
+  .content {
+    order: 2;
+  }
+}
+
+/* Estilos para os links */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #797979;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: rgb(21, 255, 0);
+}
