@@ -7,22 +7,30 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  background-color: #1F2937; /* bg-gray-800 */
+  color: #6b6b6b;
+}
+
 /* Estilos gerais */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #1F2937; /* Garantindo o fundo cinza-escuro */
 }
 
 .main-content {
   display: flex;
   flex: 1;
+  width: 100%;
 }
 
 .content {
   flex: 1;
   padding: 1rem;
-  background-color: #000000;
+  background-color: #1F2937; /* Mantendo bg-gray-800 */
   color: #6b6b6b;
 }
 
@@ -32,14 +40,8 @@
     flex-direction: column;
   }
 
-  .sidebar {
-    width: 100%;
-    display: flex;
-    order: 1;
-  }
-
   .content {
-    order: 2;
+    padding: 1rem;
   }
 }
 

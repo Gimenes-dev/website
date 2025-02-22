@@ -17,16 +17,16 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center p-4 bg-gray-900 bg-opacity-80 text-white shadow-md">
+    <header className="flex md:flex-row justify-between items-center p-4 bg-gray-900 bg-opacity-80 text-white gap-3 shadow-md">
       {/* Logo */}
-      <div className="flex w-50 items-center justify-center space-x-3">
+      <div className="flex w-35 md:w-50 items-center justify-center space-x-3">
         <img src={Logo} alt="Logo da Empresa" className="h-16" />
       </div>
 
       {/* Valor com opção de mostrar/ocultar */}
       <div className="flex items-center space-x-2">
         <p className="text-lg font-medium">
-          Valor: {showValue ? 'R$ 1.000,00' : '••••••••'}
+          {showValue ? 'R$ 1.000,00' : '••••••••'}
         </p>
         <button 
           onClick={toggleValueVisibility} 
@@ -37,7 +37,7 @@ const Header = () => {
       </div>
 
       {/* Foto do usuário, configurações e logout */}
-      <div className="flex items-center gap-8 justify-evenly space-x-6">
+      <div className="flex items-center gap-3 justify-evenly space-x-6">
         <Link to="/profile">
           <div className="text-gray-400 hover:text-white transition-colors">
             <FaUserCircle size={32} />
